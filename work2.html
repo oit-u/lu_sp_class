@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="work2.js"></script>
+    <script src="jquery.js"></script>
+</head>
+<body>
+
+    <script>
+
+    </script>
+
+    <div class="login-container" id="first">
+        <h2>Login</h2>
+        <form onsubmit="return validatePassword()" action="your_server_script.php" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" oninput="validatePassword()" required>
+                <p id="password-validation"></p>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+            <p><a href="javascript:void(0);" onclick="showForgotPasswordForm()">Forgot Password?</a></p>
+        </form>
+
+        <div id="forgot-password-form" class="forgot-password-form" id="second">
+            <h2>Forgot Password</h2>
+            <form onsubmit="return sendResetLink()" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" onclick="showForgotPasswordForm()">Send Reset Link</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- <div class="login-container" id="third">
+        <h2>Reset Link</h2>
+        <form onsubmit="return validatePassword2()" action="your_server_script.php" method="post">
+            <div class="form-group">
+                <label for="username">Password:</label>
+                <input type="text" id="username" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password:</label>
+                <input type="password" id="password" name="password" oninput="validatePassword2()" required>
+                <p id="password-validation"></p>
+            </div>
+            <div class="form-group">
+                <button type="submit">Reset Password</button>
+            </div>
+            <p><a href="javascript:void(0);" onclick="showForgotPasswordForm()">Forgot Password?</a></p>
+        </form>
+    </div> -->
+
+</body>
+</html>
